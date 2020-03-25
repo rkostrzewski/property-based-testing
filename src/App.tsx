@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { RegistrationForm } from './registration';
+import { RegisterUserModel } from './registration/Model';
+import { ThankYouMessage } from './ThankYouMessage';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const [hasRegistered, setRegistered] = useState(false)
+  const [user, setUser] = useState<RegisterUserModel | null>(null)
 
   return (
     <div>
@@ -14,9 +16,9 @@ function App() {
       </header>
       <Container>
       {
-          hasRegistered
-            ? null
-            : (<RegistrationForm register={() => setRegistered(true)} />)
+          user != null
+            ? (<ThankYouMessage email={user.email} />)
+            : (<RegistrationForm register={setUser} />)
         }
       </Container>
     </div>

@@ -1,5 +1,5 @@
 import React, { SFC } from 'react'
-import { Field, ErrorMessage, useField } from 'formik'
+import { ErrorMessage, useField } from 'formik'
 import { Form, FormControl, Col } from 'react-bootstrap'
 
 export type FormInputProps = {
