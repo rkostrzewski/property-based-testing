@@ -45,6 +45,7 @@ export const RegistrationForm: SFC<RegistrationFormProps> = ({ register }) => {
                 name="password"
                 label="Password"
                 placeholder="Password"
+                type="password"
               />
             </Form.Row>
             <Form.Row>
