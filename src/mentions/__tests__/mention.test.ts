@@ -1,4 +1,4 @@
-import fc, { VerbosityLevel } from 'fast-check'
+import fc from 'fast-check'
 import { createMentionTag, parseMentionTag } from '../mention'
 
 describe('mentions', () => {
