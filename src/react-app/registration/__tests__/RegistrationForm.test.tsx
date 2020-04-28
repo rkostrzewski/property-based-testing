@@ -70,7 +70,7 @@ describe('RegistrationForm', () => {
       confirmationEmail: fc.string(0, 20).filter(e => !isValidEmail(e))
     })
 
-    const allowsToBeSubmitted = fc
+    const disablesSubmitting = fc
       .asyncProperty(
         invalidInputArbitrary,
         async (input) => {
@@ -90,7 +90,7 @@ describe('RegistrationForm', () => {
         }
       ).afterEach(() => cleanup())
 
-    await fc.assert(allowsToBeSubmitted, {
+    await fc.assert(disablesSubmitting, {
       numRuns: 50
     })
   }, timeout)
