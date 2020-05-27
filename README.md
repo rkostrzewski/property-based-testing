@@ -2,6 +2,8 @@
 
 Using [Fast check](https://github.com/dubzzz/fast-check) library
 
+[Slides](/slides.pdf)
+
 ## Usage
 
 Install dependencies: `yarn`
